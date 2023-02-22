@@ -4,9 +4,11 @@ const userRouter = require("./routes/userRoutes")
 const fileRouter = require("./routes/fileRoutes")
 const mongoose = require('mongoose');
 const dotenv = require("dotenv");
+const cors = require("cors");
 
 dotenv.config();
 
+app.use(cors();
 app.use(express.json());
 app.use("/users", userRouter);
 
